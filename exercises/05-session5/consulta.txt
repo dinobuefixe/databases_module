@@ -1,0 +1,8 @@
+ver os caso e episodios de cada paciente, com dados concretos ou seja, cada episodio associado a cada caso e que membro de staff associado
+ir buscar patient, case, episode e staff
+ver shifts de cada membro do staff por 2 semanas
+ir buscar shift e staff
+ver salas livres
+ir buscar rooms
+ver reports de finanças, faturas, recibos, etc
+ir buscar reports e finance     
