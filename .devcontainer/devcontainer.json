@@ -10,7 +10,10 @@
 			"version": "latest",
 			"moby": "true"
 		},
+<<<<<<< HEAD
 		"ghcr.io/devcontainers/features/node:2": {},
+=======
+>>>>>>> aa29bb4 (feat/session8-start)
 		"ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {}
 	}
 
