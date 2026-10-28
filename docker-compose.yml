@@ -39,7 +39,7 @@ services:
     environment:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
     ports:
-      - "127.0.0.1:6379:6379"
+      - "6379:6379"
     volumes:
       - redis_data:/data
     healthcheck:
@@ -47,6 +47,17 @@ services:
       interval: 5s
       timeout: 5s
       retries: 20
+
+  pgadmin4:
+    image: elestio/pgadmin:${SOFTWARE_VERSION_TAG}
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_LISTEN_PORT: 8080
+    ports:
+      - "8080:8080"
 
 volumes:
   postgres_data:
