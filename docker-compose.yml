@@ -33,13 +33,6 @@ services:
       timeout: 5s
       retries: 20
 
-  dbgate:
-    image: dbgate/dbgate:latest
-    ports:
-      - "8888:3000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-
   redis:
     image: redis:8
     command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]

@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Date, Float, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Date, Integer, String, Float, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -15,7 +14,6 @@ class Task(Base):
     finished_at = Column(Date, nullable=True)
     outcome = Column(String, nullable=True)
     status = Column(String, nullable=False)
-    participants = relationship("Participant", back_populates="task")
 
 class Participant(Base):
     __tablename__ = 'participants'
@@ -30,4 +28,3 @@ class Participant(Base):
     blood_pressure_systolic = Column(Integer, nullable=False)
     blood_pressure_diastolic = Column(Integer, nullable=False)
     task_id = Column(UUID,ForeignKey('tasks.id'), nullable=False)
-    task = relationship("Task", back_populates="participants")

@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Date, ForeignKey
+from sqlalchemy import Column, Date
 from sqlalchemy.dialects.postgresql import JSONB, UUID
+from sqlalchemy import ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
