@@ -1,0 +1,9 @@
+[project]
+name = "pagila-mongo"
+version = "0.1.0"
+description = "Load Pagila into MongoDB and exercise queries, updates, validation and indexes"
+requires-python = ">=3.10"
+dependencies = [
+    "pymongo>=4.6",
+    "psycopg[binary]>=3.1",
+]
