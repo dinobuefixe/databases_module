@@ -1306,7 +1306,7 @@ Reproduce a lost update:
 | | `UPDATE account SET balance = 80 WHERE id = 1;` |
 | | `COMMIT;` |
 
-The final balance is 80. It should be 70.
+The final balance is 90. It should be 80.
 
 Fix 1, atomic update (each session runs this instead of reading first):
 
