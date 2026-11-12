@@ -1,0 +1,8 @@
+[project]
+name = "challenge"
+version = "0.1.0"
+requires-python = ">=3.15"
+dependencies = [
+    "faker>=40.54.0",
+    "psycopg[binary]>=3.3.9",
+]
